@@ -1,12 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+$primary-text-color: #EB7E28;
+
 body {
-    margin:0px;  
+    margin: 0px;  
 }
 
 header {
     background-image: url("img/claude-piche-1169584-unsplash.jpg");
     height: 100vh;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    .top-menu {
+        color: $primary-text-color;
+        position: absolute;
+        top: 12px;
+        left: 0px;
+        width: 100%;
+        
+            .logo {
+                display: inline-block;
+                
+                h1 {
+                    margin-top: 0px;
+                    margin-left: 24px;
+                    font-size: 2.5rem;
+                    letter-spacing: 1px;
+                    font-family: 'Playfair Display', serif;
+                    font-weight: 550;
+                    padding-top : 0;    
+            }
+        }
+    }
+}
+
+nav {
+    margin: 7px 0 0 0;
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+
+    ul {
+        list-style-type:none;
+        margin: 0;
+
+        li { 
+            display: inline-block;
+            text-align: center;
+            padding: 12px 4.2vw;
+            font-size: 1.5rem;
+            font-weight: 400;
+            
+            a {
+                text-decoration: none;
+                color: $primary-text-color;
+                transition: 0.15s;
+
+                &:hover {
+                    border-bottom: 3px solid rgb(185, 30, 10);
+                }
+            }
+        }
+    }   
+}
+
+.main-banner {
+    position: absolute;
+    color: #E8B790;
+    top: 15vh;
+    right: 21vw;
+    font-size: 1.9rem;
+    font-family: 'Playfair Display', serif;
+    text-align: left;
+
+    h2 {
+        margin:0 0 3px 0;
+        font-weight: 900;
+    }
+    
+    p {
+        margin:0 0 0px 0;
+        color: $primary-text-color
+    }
 }
