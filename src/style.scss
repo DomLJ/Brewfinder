@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
-$primary-text-color: #EB7E28;
+$primary-color: #EB7E28;
+$secondary-color: #E8B790;
 
 body {
     margin: 0px;  
@@ -14,7 +15,7 @@ header {
     position: relative;
 
     .top-menu {
-        color: $primary-text-color;
+        color: $primary-color;
         position: absolute;
         top: 12px;
         left: 0px;
@@ -43,7 +44,7 @@ nav {
     right: 0px;
 
     ul {
-        list-style-type:none;
+        list-style-type: none;
         margin: 0;
 
         li { 
@@ -55,7 +56,7 @@ nav {
             
             a {
                 text-decoration: none;
-                color: $primary-text-color;
+                color: $primary-color;
                 transition: 0.15s;
 
                 &:hover {
@@ -68,7 +69,7 @@ nav {
 
 .main-banner {
     position: absolute;
-    color: #E8B790;
+    color: $secondary-color;
     top: 15vh;
     right: 21vw;
     font-size: 1.9rem;
@@ -76,12 +77,169 @@ nav {
     text-align: left;
 
     h2 {
-        margin:0 0 3px 0;
+        margin: 0 0 3px 0;
         font-weight: 900;
     }
     
     p {
-        margin:0 0 0px 0;
-        color: $primary-text-color
+        margin: 0 0 0px 0;
+        color: $primary-color
     }
 }
+
+footer {
+    color: white;
+    background-color: rgb(43, 42, 42);
+    height: 100px;
+    width: 100%;
+}
+
+.search {
+    height: 80vh;
+    width: 100%;
+    background-color: white;
+    position: relative;
+
+    .brewinput {
+        position: absolute;
+        height: 100%;
+        width: 35%;
+        z-index: 0;
+
+        h1 {
+            padding-top: 5%;
+            text-align: center;
+            width: 100%;
+            height:10%;
+            margin:0;
+            color: $primary-color;
+        }
+
+        .form {
+            width: 85%;
+            height: 9%;
+            margin: auto;
+            padding-top: 3%;
+
+            input {
+                width: 100%;
+                height: 100%;
+                border-color: $secondary-color;
+                border-style: solid;
+                box-sizing: border-box;
+                font-size: 1.5rem;
+                text-indent: 4px;
+
+                &:focus { outline-color: $primary-color; }
+            }
+  
+        }
+
+        ul {
+            list-style-type: none;
+            width: 85%;
+            padding: 0;
+            margin: auto;
+            z-index: 3;
+            background-color: white;
+
+            
+            
+            li {
+                width: 100%;
+                height: 6.3%;
+                box-sizing: border-box;
+                border: 1px solid $secondary-color;
+                display:flex;
+                align-items: center;
+                background-color:white;
+                z-index: 5;
+                
+
+                &:hover {
+                    color: white;
+                    background-color: $secondary-color;
+                    cursor: pointer;
+                }
+
+                p {
+                    margin:0;
+                    padding-left: 5px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 100%;
+                   
+                }
+            }
+        }
+
+        .output {
+            position: absolute;
+            z-index: -1;
+            color: $primary-color;
+            height: 70%;
+            width: 100%;
+            bottom: 0;
+            margin: 0;
+            
+
+            h2 {
+                text-align: center;
+                padding-left: 10%;
+                padding-right: 10%;
+            }
+
+            a {
+                text-align: center;
+                color: $primary-color;
+                word-wrap: break-word;
+
+                &:hover {
+                    color: $secondary-color;
+                }
+
+                &:visited {
+                    color: $secondary-color;
+                }
+            }
+            
+            
+        }
+        
+    }
+
+    #map {
+        position: absolute;
+        height:100%;
+        width:65%;
+        right:0px;
+        box-sizing: border-box;
+        border: 1px solid white;
+        z-index:0;
+         
+    }
+
+    .map-curtain {
+        position: absolute;
+        height:100%;
+        width:65%;
+        right:0px;
+        box-sizing: border-box;
+        z-index: 1;
+        opacity: 0.6;
+        background-color:whitesmoke;
+        
+        h1 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            
+        }
+    }
+}
+
+.invisible {display: none;}
