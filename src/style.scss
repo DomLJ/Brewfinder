@@ -1,245 +1,406 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url("https://fonts.googleapis.com/css?family=Patua+One");
 
-$primary-color: #EB7E28;
-$secondary-color: #E8B790;
+$primary-color: #b85b14;
+$secondary-color: #e1a570;
+$main-border-width: 0.27vw;
+$main-border-radius: 0.31vw;
+$main-border: $main-border-width solid $primary-color;
 
 body {
-    margin: 0px;  
+  margin: 0px;
 }
 
-header {
-    background-image: url("img/claude-piche-1169584-unsplash.jpg");
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-    position: relative;
+.main-block {
+  background-image: url("img/claude-piche-1169584-unsplash.jpg");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 
-    .top-menu {
-        color: $primary-color;
-        position: absolute;
-        top: 12px;
-        left: 0px;
-        width: 100%;
-        
-            .logo {
-                display: inline-block;
-                
-                h1 {
-                    margin-top: 0px;
-                    margin-left: 24px;
-                    font-size: 2.5rem;
-                    letter-spacing: 1px;
-                    font-family: 'Playfair Display', serif;
-                    font-weight: 550;
-                    padding-top : 0;    
-            }
-        }
+  header {
+    width: 100%;
+
+    h1 {
+      text-shadow: 0.21vw 0.21vw black;
+      font-size: 4.5vw;
+      letter-spacing: 0.15vw;
+      font-family: "Patua One", cursive;
+      color: $primary-color;
+      font-weight: 650;
+      margin-top: 0;
+      padding-top: 2vh;
+      padding-left: 5.8vw;
     }
-}
-
-nav {
-    margin: 7px 0 0 0;
-    position: absolute;
-    display: inline-block;
-    right: 0px;
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-
-        li { 
-            display: inline-block;
-            text-align: center;
-            padding: 12px 4.2vw;
-            font-size: 1.5rem;
-            font-weight: 400;
-            
-            a {
-                text-decoration: none;
-                color: $primary-color;
-                transition: 0.15s;
-
-                &:hover {
-                    border-bottom: 3px solid rgb(185, 30, 10);
-                }
-            }
-        }
-    }   
-}
-
-.main-banner {
-    position: absolute;
-    color: $secondary-color;
-    top: 15vh;
-    right: 21vw;
-    font-size: 1.9rem;
-    font-family: 'Playfair Display', serif;
-    text-align: left;
-
-    h2 {
-        margin: 0 0 3px 0;
-        font-weight: 900;
-    }
-    
-    p {
-        margin: 0 0 0px 0;
-        color: $primary-color
-    }
+  }
 }
 
 footer {
-    color: white;
-    background-color: rgb(43, 42, 42);
-    height: 100px;
-    width: 100%;
+  color: white;
+  background-color: rgb(27, 27, 27);
+  height: 4vw;
+  width: 100%;
+  display: flex;
+
+  h1 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1vw;
+    font-size: 1.5vw;
+  }
 }
 
 .search {
-    height: 80vh;
-    width: 100%;
-    background-color: white;
-    position: relative;
+  height: 68%;
+  width: 92%;
+  position: relative;
+  margin-top: 6vh;
+  margin-left: 2.3%;
 
-    .brewinput {
-        position: absolute;
+  .brewinput {
+    position: absolute;
+    height: 100%;
+    width: 35%;
+    z-index: 0;
+
+    .form {
+      width: 85%;
+      height: 12%;
+      margin: auto;
+      padding: 0;
+
+      input {
+        width: 100%;
         height: 100%;
-        width: 35%;
-        z-index: 0;
-
-        h1 {
-            padding-top: 5%;
-            text-align: center;
-            width: 100%;
-            height:10%;
-            margin:0;
-            color: $primary-color;
-        }
-
-        .form {
-            width: 85%;
-            height: 9%;
-            margin: auto;
-            padding-top: 3%;
-
-            input {
-                width: 100%;
-                height: 100%;
-                border-color: $secondary-color;
-                border-style: solid;
-                box-sizing: border-box;
-                font-size: 1.5rem;
-                text-indent: 4px;
-
-                &:focus { outline-color: $primary-color; }
-            }
-  
-        }
-
-        ul {
-            list-style-type: none;
-            width: 85%;
-            padding: 0;
-            margin: auto;
-            z-index: 3;
-            background-color: white;
-
-            
-            
-            li {
-                width: 100%;
-                height: 6.3%;
-                box-sizing: border-box;
-                border: 1px solid $secondary-color;
-                display:flex;
-                align-items: center;
-                background-color:white;
-                z-index: 5;
-                
-
-                &:hover {
-                    color: white;
-                    background-color: $secondary-color;
-                    cursor: pointer;
-                }
-
-                p {
-                    margin:0;
-                    padding-left: 5px;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    width: 100%;
-                   
-                }
-            }
-        }
-
-        .output {
-            position: absolute;
-            z-index: -1;
-            color: $primary-color;
-            height: 70%;
-            width: 100%;
-            bottom: 0;
-            margin: 0;
-            
-
-            h2 {
-                text-align: center;
-                padding-left: 10%;
-                padding-right: 10%;
-            }
-
-            a {
-                text-align: center;
-                color: $primary-color;
-                word-wrap: break-word;
-
-                &:hover {
-                    color: $secondary-color;
-                }
-
-                &:visited {
-                    color: $secondary-color;
-                }
-            }
-            
-            
-        }
-        
-    }
-
-    #map {
-        position: absolute;
-        height:100%;
-        width:65%;
-        right:0px;
         box-sizing: border-box;
-        border: 1px solid white;
-        z-index:0;
-         
+        font-size: 2.1vw;
+        text-indent: 0.5vw;
+        border: $main-border;
+        border-radius: $main-border-radius;
+
+        &:focus {
+          outline-color: $primary-color;
+        }
+      }
     }
 
-    .map-curtain {
-        position: absolute;
-        height:100%;
-        width:65%;
-        right:0px;
+    ul {
+      list-style-type: none;
+      width: 85%;
+      height: 50%;
+      padding: 0;
+      margin: auto;
+      z-index: 3;
+      background-color: none;
+
+      li {
+        width: 100%;
+        height: 9.7%;
         box-sizing: border-box;
-        z-index: 1;
-        opacity: 0.6;
-        background-color:whitesmoke;
-        
-        h1 {
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            
+        border-bottom: $main-border-width;
+        border-left: $main-border-width;
+        border-right: $main-border-width;
+        border-top: 0;
+        border-style: solid;
+        border-color: $primary-color;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        z-index: 5;
+
+        &:last-child {
+          border-radius: $main-border-radius;
         }
+
+        &:hover {
+          color: white;
+          background-color: $primary-color;
+          cursor: pointer;
+        }
+
+        p {
+          font-size: 1.3vw;
+          margin: 0;
+          padding-left: 5px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%;
+        }
+      }
     }
+
+    .output {
+      position: absolute;
+      z-index: -1;
+      height: 84%;
+      width: 85%;
+      bottom: 0;
+      margin-left: 7.5%;
+      margin-right: 7.5%;
+      background-color: white;
+      border: $main-border;
+      border-radius: $main-border-radius;
+      box-sizing: border-box;
+
+      h2 {
+        font-size: 2vw;
+        text-align: center;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+        color: $primary-color;
+
+        &:first-child {
+          color: black;
+          font-size: 2.2vw;
+        }
+      }
+
+      a {
+        font-size: 1.8vw;
+        text-align: center;
+        color: $primary-color;
+        word-wrap: break-word;
+
+        &:hover,
+        &:visited {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+
+  #map {
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    right: 0;
+    box-sizing: border-box;
+    z-index: 0;
+    border: $main-border;
+    border-radius: $main-border-radius;
+  }
+
+  .map-curtain {
+    position: absolute;
+    height: 100%;
+    width: 65%;
+    right: 0;
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 0.6;
+    background-color: whitesmoke;
+    border: $main-border;
+    border-radius: $main-border-radius;
+
+    h1 {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 2vw;
+    }
+  }
 }
 
-.invisible {display: none;}
+.invisible {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  $main-border-width: 0.95vw;
+  $main-border-radius: 1.2vw;
+  $main-border: $main-border-width solid $primary-color;
+
+  .main-block {
+    height: 100vh;
+
+    header {
+      h1 {
+        font-size: 9vw;
+        letter-spacing: 4px;
+        padding-left: 5vw;
+      }
+    }
+  }
+
+  .search {
+    height: 86%;
+    width: 82%;
+    position: absolute;
+    margin: 0;
+    margin-top: 0;
+    left: 9%;
+
+    .brewinput {
+      position: absolute;
+      height: 40%;
+      width: 100%;
+      z-index: 2;
+      left: 0;
+
+      .form {
+        width: 100%;
+        height: 32%;
+        margin: auto;
+        padding: 0;
+
+        input {
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          font-size: 4vw;
+          text-indent: 1vw;
+          border: $main-border;
+          border-radius: $main-border-radius;
+
+          &:focus {
+            outline-color: $primary-color;
+          }
+        }
+      }
+
+      ul {
+        position: absolute;
+        list-style-type: none;
+        width: 100%;
+        height: 150%;
+        padding: 0;
+        margin: auto;
+        background-color: none;
+
+        li {
+          width: 100%;
+          height: 9.3%;
+          box-sizing: border-box;
+          border-bottom: $main-border-width;
+          border-left: $main-border-width;
+          border-right: $main-border-width;
+          border-top: 0;
+          border-style: solid;
+          border-color: $primary-color;
+
+          &:hover {
+            color: white;
+            background-color: $primary-color;
+            cursor: pointer;
+          }
+
+          p {
+            font-size: 2.9vw;
+            padding-left: 1vw;
+          }
+        }
+      }
+
+      .output {
+        position: absolute;
+        z-index: -1;
+        height: 62%;
+        width: 100%;
+        top: 35%;
+        margin: 0;
+        border: $main-border;
+        border-radius: $main-border-radius;
+
+        h2 {
+          margin-bottom: 0;
+          margin-top: 0.5vh;
+          padding-top: 0;
+          font-size: 4vw;
+          padding-left: 8%;
+          padding-right: 8%;
+          color: $primary-color;
+
+          &:first-child {
+            font-size: 4.6vw;
+          }
+
+          a {
+            font-size: 3.7vw;
+          }
+        }
+      }
+    }
+
+    .map-container {
+      position: absolute;
+      height: 55%;
+      width: 100%;
+      top: 40%;
+
+      #map {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 0;
+        border: $main-border;
+        border-radius: $main-border-radius;
+      }
+
+      .map-curtain {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+
+        h1 {
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 10vw;
+
+    h1 {
+      padding-top: 2.5vw;
+      font-size: 4.5vw;
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) and (orientation: portrait) {
+  .main-block {
+    header {
+      display: flex;
+
+      h1 {
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+
+  .search {
+    .brewinput {
+      .form {
+        input {
+          font-size: 5vw;
+          text-indent: 1.4vw;
+        }
+      }
+
+      .output {
+        h2 {
+          margin-top: 1.3vh;
+          font-size: 4.5vw;
+        }
+      }
+    }
+
+    .map-container {
+      .map-curtain {
+        h1 {
+          font-size: 5.3vw;
+        }
+      }
+    }
+  }
+}

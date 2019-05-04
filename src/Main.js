@@ -1,12 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Search from './Search';
 
-class Main extends Component {
-    render() {
-        return(
-            <div> <Search/> </div>
-        )
-    }
+function Main() {
+    return (
+        <div className="main-block">
+            <header >
+                <h1>Brewfinder</h1>
+            </header>
+            <Search />
+        </div>
+    )
 }
 
-export default Main;
+export default Main

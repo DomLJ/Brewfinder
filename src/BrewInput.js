@@ -16,10 +16,10 @@ class BrewInput extends Component {
 
         return (
             <div className="brewinput">
-                <h1> Find Brewery </h1>
+                
                 <div className="form">
                     <input
-                        placeholder="Search..."
+                        placeholder="Find Brewery..."
                         onChange={this.props.autocomplete}
                         value={this.props.search}
                     />

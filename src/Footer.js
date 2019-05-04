@@ -2,7 +2,9 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer> Footer </footer>
+        <footer>
+                <h1> Created by Dominik Józefiak</h1>
+        </footer>
     )
 }
 export default Footer

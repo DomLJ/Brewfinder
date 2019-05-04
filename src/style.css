@@ -1,91 +1,52 @@
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+@import url("https://fonts.googleapis.com/css?family=Patua+One");
 body {
   margin: 0px;
 }
 
-header {
+.main-block {
   background-image: url("img/claude-piche-1169584-unsplash.jpg");
   height: 100vh;
   background-position: center;
   background-size: cover;
   position: relative;
 }
-header .top-menu {
-  color: #EB7E28;
-  position: absolute;
-  top: 12px;
-  left: 0px;
+.main-block header {
   width: 100%;
 }
-header .top-menu .logo {
-  display: inline-block;
-}
-header .top-menu .logo h1 {
-  margin-top: 0px;
-  margin-left: 24px;
-  font-size: 2.5rem;
-  letter-spacing: 1px;
-  font-family: "Playfair Display", serif;
-  font-weight: 550;
-  padding-top: 0;
-}
-
-nav {
-  margin: 7px 0 0 0;
-  position: absolute;
-  display: inline-block;
-  right: 0px;
-}
-nav ul {
-  list-style-type: none;
-  margin: 0;
-}
-nav ul li {
-  display: inline-block;
-  text-align: center;
-  padding: 12px 4.2vw;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #EB7E28;
-  transition: 0.15s;
-}
-nav ul li a:hover {
-  border-bottom: 3px solid #b91e0a;
-}
-
-.main-banner {
-  position: absolute;
-  color: #E8B790;
-  top: 15vh;
-  right: 21vw;
-  font-size: 1.9rem;
-  font-family: "Playfair Display", serif;
-  text-align: left;
-}
-.main-banner h2 {
-  margin: 0 0 3px 0;
-  font-weight: 900;
-}
-.main-banner p {
-  margin: 0 0 0px 0;
-  color: #EB7E28;
+.main-block header h1 {
+  text-shadow: 0.21vw 0.21vw black;
+  font-size: 4.5vw;
+  letter-spacing: 0.15vw;
+  font-family: "Patua One", cursive;
+  color: #b85b14;
+  font-weight: 650;
+  margin-top: 0;
+  padding-top: 2vh;
+  padding-left: 5.8vw;
 }
 
 footer {
   color: white;
-  background-color: #2b2a2a;
-  height: 100px;
+  background-color: #1b1b1b;
+  height: 4vw;
   width: 100%;
+  display: flex;
+}
+footer h1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 1vw;
+  font-size: 1.5vw;
 }
 
 .search {
-  height: 80vh;
-  width: 100%;
-  background-color: white;
+  height: 68%;
+  width: 92%;
   position: relative;
+  margin-top: 6vh;
+  margin-left: 2.3%;
 }
 .search .brewinput {
   position: absolute;
@@ -93,56 +54,58 @@ footer {
   width: 35%;
   z-index: 0;
 }
-.search .brewinput h1 {
-  padding-top: 5%;
-  text-align: center;
-  width: 100%;
-  height: 10%;
-  margin: 0;
-  color: #EB7E28;
-}
 .search .brewinput .form {
   width: 85%;
-  height: 9%;
+  height: 12%;
   margin: auto;
-  padding-top: 3%;
+  padding: 0;
 }
 .search .brewinput .form input {
   width: 100%;
   height: 100%;
-  border-color: #E8B790;
-  border-style: solid;
   box-sizing: border-box;
-  font-size: 1.5rem;
-  text-indent: 4px;
+  font-size: 2.1vw;
+  text-indent: 0.5vw;
+  border: 0.27vw solid #b85b14;
+  border-radius: 0.31vw;
 }
 .search .brewinput .form input:focus {
-  outline-color: #EB7E28;
+  outline-color: #b85b14;
 }
 .search .brewinput ul {
   list-style-type: none;
   width: 85%;
+  height: 50%;
   padding: 0;
   margin: auto;
   z-index: 3;
-  background-color: white;
+  background-color: none;
 }
 .search .brewinput ul li {
   width: 100%;
-  height: 6.3%;
+  height: 9.7%;
   box-sizing: border-box;
-  border: 1px solid #E8B790;
+  border-bottom: 0.27vw;
+  border-left: 0.27vw;
+  border-right: 0.27vw;
+  border-top: 0;
+  border-style: solid;
+  border-color: #b85b14;
   display: flex;
   align-items: center;
   background-color: white;
   z-index: 5;
 }
+.search .brewinput ul li:last-child {
+  border-radius: 0.31vw;
+}
 .search .brewinput ul li:hover {
   color: white;
-  background-color: #E8B790;
+  background-color: #b85b14;
   cursor: pointer;
 }
 .search .brewinput ul li p {
+  font-size: 1.3vw;
   margin: 0;
   padding-left: 5px;
   white-space: nowrap;
@@ -153,46 +116,58 @@ footer {
 .search .brewinput .output {
   position: absolute;
   z-index: -1;
-  color: #EB7E28;
-  height: 70%;
-  width: 100%;
+  height: 84%;
+  width: 85%;
   bottom: 0;
-  margin: 0;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  background-color: white;
+  border: 0.27vw solid #b85b14;
+  border-radius: 0.31vw;
+  box-sizing: border-box;
 }
 .search .brewinput .output h2 {
+  font-size: 2vw;
   text-align: center;
   padding-left: 10%;
   padding-right: 10%;
+  padding-top: 5%;
+  color: #b85b14;
+}
+.search .brewinput .output h2:first-child {
+  color: black;
+  font-size: 2.2vw;
 }
 .search .brewinput .output a {
+  font-size: 1.8vw;
   text-align: center;
-  color: #EB7E28;
+  color: #b85b14;
   word-wrap: break-word;
 }
-.search .brewinput .output a:hover {
-  color: #E8B790;
-}
-.search .brewinput .output a:visited {
-  color: #E8B790;
+.search .brewinput .output a:hover, .search .brewinput .output a:visited {
+  color: #e1a570;
 }
 .search #map {
   position: absolute;
   height: 100%;
   width: 65%;
-  right: 0px;
+  right: 0;
   box-sizing: border-box;
-  border: 1px solid white;
   z-index: 0;
+  border: 0.27vw solid #b85b14;
+  border-radius: 0.31vw;
 }
 .search .map-curtain {
   position: absolute;
   height: 100%;
   width: 65%;
-  right: 0px;
+  right: 0;
   box-sizing: border-box;
   z-index: 1;
   opacity: 0.6;
   background-color: whitesmoke;
+  border: 0.27vw solid #b85b14;
+  border-radius: 0.31vw;
 }
 .search .map-curtain h1 {
   margin: 0;
@@ -201,10 +176,163 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  font-size: 2vw;
 }
 
 .invisible {
   display: none;
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .main-block {
+    height: 100vh;
+  }
+  .main-block header h1 {
+    font-size: 9vw;
+    letter-spacing: 4px;
+    padding-left: 5vw;
+  }
+
+  .search {
+    height: 86%;
+    width: 82%;
+    position: absolute;
+    margin: 0;
+    margin-top: 0;
+    left: 9%;
+  }
+  .search .brewinput {
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+  }
+  .search .brewinput .form {
+    width: 100%;
+    height: 32%;
+    margin: auto;
+    padding: 0;
+  }
+  .search .brewinput .form input {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 4vw;
+    text-indent: 1vw;
+    border: 0.95vw solid #b85b14;
+    border-radius: 1.2vw;
+  }
+  .search .brewinput .form input:focus {
+    outline-color: #b85b14;
+  }
+  .search .brewinput ul {
+    position: absolute;
+    list-style-type: none;
+    width: 100%;
+    height: 150%;
+    padding: 0;
+    margin: auto;
+    background-color: none;
+  }
+  .search .brewinput ul li {
+    width: 100%;
+    height: 9.3%;
+    box-sizing: border-box;
+    border-bottom: 0.95vw;
+    border-left: 0.95vw;
+    border-right: 0.95vw;
+    border-top: 0;
+    border-style: solid;
+    border-color: #b85b14;
+  }
+  .search .brewinput ul li:hover {
+    color: white;
+    background-color: #b85b14;
+    cursor: pointer;
+  }
+  .search .brewinput ul li p {
+    font-size: 2.9vw;
+    padding-left: 1vw;
+  }
+  .search .brewinput .output {
+    position: absolute;
+    z-index: -1;
+    height: 62%;
+    width: 100%;
+    top: 35%;
+    margin: 0;
+    border: 0.95vw solid #b85b14;
+    border-radius: 1.2vw;
+  }
+  .search .brewinput .output h2 {
+    margin-bottom: 0;
+    margin-top: 0.5vh;
+    padding-top: 0;
+    font-size: 4vw;
+    padding-left: 8%;
+    padding-right: 8%;
+    color: #b85b14;
+  }
+  .search .brewinput .output h2:first-child {
+    font-size: 4.6vw;
+  }
+  .search .brewinput .output h2 a {
+    font-size: 3.7vw;
+  }
+  .search .map-container {
+    position: absolute;
+    height: 55%;
+    width: 100%;
+    top: 40%;
+  }
+  .search .map-container #map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 0;
+    border: 0.95vw solid #b85b14;
+    border-radius: 1.2vw;
+  }
+  .search .map-container .map-curtain {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .search .map-container .map-curtain h1 {
+    font-size: 4vw;
+  }
+
+  footer {
+    height: 10vw;
+  }
+  footer h1 {
+    padding-top: 2.5vw;
+    font-size: 4.5vw;
+  }
+}
+@media only screen and (max-width: 420px) and (orientation: portrait) {
+  .main-block header {
+    display: flex;
+  }
+  .main-block header h1 {
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .search .brewinput .form input {
+    font-size: 5vw;
+    text-indent: 1.4vw;
+  }
+  .search .brewinput .output h2 {
+    margin-top: 1.3vh;
+    font-size: 4.5vw;
+  }
+  .search .map-container .map-curtain h1 {
+    font-size: 5.3vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

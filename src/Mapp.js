@@ -42,7 +42,7 @@ class Mapp extends Component {
             <div className="map-container">
                 <div id="map"></div>
                 <div className={`map-curtain ${this.props.chosenBrewery.latitude ? "invisible" : " "}`}>
-                    <h1>Sorry, localization is unknown</h1>
+                    <h1>Sorry, geographical coordinates are unknown</h1>
                 </div>
             </div>
         )

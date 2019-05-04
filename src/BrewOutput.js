@@ -16,13 +16,8 @@ function BrewOutput(props) {
                 : null}
             </h2>
 
-            <h2> {(brew.country)
-                ? brew.country
-                : null}
-            </h2>
-
             <h2> {(brew.website_url)
-                ? <a href={brew.website_url} target="_blank" rel="noopener noreferrer" > {brew.website_url} </a>
+                ? <a href={brew.website_url} target="_blank" rel="noopener noreferrer" > {brew.website_url.slice(11)} </a>
                 : null}
             </h2>
         </div>
