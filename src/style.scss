@@ -34,26 +34,9 @@ body {
   }
 }
 
-footer {
-  color: white;
-  background-color: rgb(27, 27, 27);
-  height: 4vw;
-  width: 100%;
-  display: flex;
-
-  h1 {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 1vw;
-    font-size: 1.5vw;
-  }
-}
-
 .search {
   height: 68%;
-  width: 92%;
+  width: 92.2%;
   position: relative;
   margin-top: 6vh;
   margin-left: 2.3%;
@@ -96,7 +79,7 @@ footer {
 
       li {
         width: 100%;
-        height: 9.7%;
+        height: 9.9%;
         box-sizing: border-box;
         border-bottom: $main-border-width;
         border-left: $main-border-width;
@@ -207,6 +190,21 @@ footer {
   }
 }
 
+footer {
+  color: white;
+  height: 7.5vh;
+  width: 100%;
+  align-items: center;
+  background-color: black;
+
+  h1 {
+    margin: 0;
+    padding-top: 2.5vh;
+    font-size: 2.5vh;
+    text-align: center;
+  }
+}
+
 .invisible {
   display: none;
 }
@@ -230,11 +228,11 @@ footer {
 
   .search {
     height: 86%;
-    width: 82%;
+    width: 90%;
     position: absolute;
     margin: 0;
     margin-top: 0;
-    left: 9%;
+    left: 5%;
 
     .brewinput {
       position: absolute;
@@ -309,7 +307,7 @@ footer {
 
         h2 {
           margin-bottom: 0;
-          margin-top: 0.5vh;
+          margin-top: 0.9vh;
           padding-top: 0;
           font-size: 4vw;
           padding-left: 8%;
@@ -382,15 +380,29 @@ footer {
     .brewinput {
       .form {
         input {
-          font-size: 5vw;
-          text-indent: 1.4vw;
+          font-size: 7.5vw;
+          text-indent: 2vw;
         }
       }
 
+      ul {
+        li {
+          height: 9.7%;
+
+          p {
+            font-size: 3.9vw;
+            padding-left: 1.9vw;
+          }
+        }
+      }
       .output {
         h2 {
-          margin-top: 1.3vh;
-          font-size: 4.5vw;
+          margin-top: 1.2vh;
+          font-size: 4.8vw;
+
+          &:first-child {
+            font-size: 5.3vw;
+          }
         }
       }
     }
@@ -398,9 +410,103 @@ footer {
     .map-container {
       .map-curtain {
         h1 {
-          font-size: 5.3vw;
+          font-size: 5.5vw;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 732px) and (orientation: landscape) {
+  $main-border-width: 0.4vw;
+  $main-border-radius: 0.38vw;
+  $main-border: $main-border-width solid $primary-color;
+
+  .main-block {
+    header {
+      display: flex;
+
+      h1 {
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        letter-spacing: 4px;
+      }
+    }
+  }
+
+  .search {
+    margin-top: 0;
+    height: 78%;
+    width: 95%;
+    margin-left: 1.3%;
+
+    .brewinput {
+      .form {
+        input {
+          font-size: 2.5vw;
+          text-indent: 1vw;
+          border: $main-border;
+          border-radius: $main-border-radius;
+        }
+      }
+
+      ul {
+        li {
+          height: 11.2%;
+          border-bottom: $main-border-width;
+          border-left: $main-border-width;
+          border-right: $main-border-width;
+          border-style: solid;
+          border-color: $primary-color;
+
+          &:last-child {
+            border-radius: $main-border-radius;
+          }
+
+          p {
+            font-size: 1.8vw;
+            padding-left: 1vw;
+          }
+        }
+      }
+      .output {
+        border: $main-border;
+        border-radius: $main-border-radius;
+
+        h2 {
+          margin-top: 1.2vh;
+          font-size: 2.1vw;
+
+          &:first-child {
+            font-size: 2.7vw;
+          }
+        }
+      }
+    }
+
+    .map-container {
+      #map {
+        border: $main-border;
+        border-radius: $main-border-radius;
+      }
+
+      .map-curtain {
+        border: $main-border;
+        border-radius: $main-border-radius;
+        h1 {
+          font-size: 3.5vw;
+        }
+      }
+    }
+  }
+
+  footer {
+    height: 8.0vh;
+    
+    h1 {
+      padding-top: 2.0vh;
+      font-size: 4.0vh;
     }
   }
 }
