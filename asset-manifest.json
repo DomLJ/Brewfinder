@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Brewfinder/static/css/main.62a15a7a.chunk.css",
+    "main.js": "/Brewfinder/static/js/main.6ddf75e1.chunk.js",
+    "main.js.map": "/Brewfinder/static/js/main.6ddf75e1.chunk.js.map",
+    "runtime~main.js": "/Brewfinder/static/js/runtime~main.61fe2796.js",
+    "runtime~main.js.map": "/Brewfinder/static/js/runtime~main.61fe2796.js.map",
+    "static/js/2.97d3f7fc.chunk.js": "/Brewfinder/static/js/2.97d3f7fc.chunk.js",
+    "static/js/2.97d3f7fc.chunk.js.map": "/Brewfinder/static/js/2.97d3f7fc.chunk.js.map",
+    "index.html": "/Brewfinder/index.html",
+    "precache-manifest.a68e8a4705f3a6ba060534fcfa013b2f.js": "/Brewfinder/precache-manifest.a68e8a4705f3a6ba060534fcfa013b2f.js",
+    "service-worker.js": "/Brewfinder/service-worker.js",
+    "static/css/main.62a15a7a.chunk.css.map": "/Brewfinder/static/css/main.62a15a7a.chunk.css.map",
+    "static/media/style.css": "/Brewfinder/static/media/claude-piche-1169584-unsplash.508245a5.jpg"
+  }
+}
