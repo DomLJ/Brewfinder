@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import Mapp from './Mapp';
+import Map from './Map';
 import BrewInput from './BrewInput';
 
 
 class Search extends Component {
     constructor() {
         super();
+        this.submitAutocomplete = this.submitAutocomplete.bind(this)
+        this.pickBrewery = this.pickBrewery.bind(this)
         this.state = {
             autocompleteResult: [],
             search: "",
@@ -34,12 +36,11 @@ class Search extends Component {
         }, () => fetch(`https://api.openbrewerydb.org/breweries/autocomplete?query=${this.state.search}`)
             .then(this.handleErrors)
             .then(result => result.json())
-            .then(
-                result => {
-                    this.setState({
-                        autocompleteResult: result
-                    })
-                }
+            .then(result => {
+                this.setState({
+                    autocompleteResult: result
+                })
+            }
             )
             .catch(error => console.log(error))
         )
@@ -66,15 +67,15 @@ class Search extends Component {
         return (
             <div className="search">
                 <BrewInput
-                    autocomplete={this.submitAutocomplete.bind(this)}
+                    autocomplete={this.submitAutocomplete}
                     autocompleteResult={this.state.autocompleteResult}
-                    pickBrewery={this.pickBrewery.bind(this)}
+                    pickBrewery={this.pickBrewery}
                     chosenBrewery={this.state.chosenBrewery}
                     search={this.state.search}
                     isAutocompleteVisible={this.state.isAutocompleteVisible}
                     id={this.state.key}
                 />
-                <Mapp
+                <Map
                     chosenBrewery={this.state.chosenBrewery}
                     key={this.state.key}
                 />

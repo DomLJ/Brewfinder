@@ -3,17 +3,17 @@ body {
   margin: 0px;
 }
 
-.main-block {
+main {
   background-image: url("img/claude-piche-1169584-unsplash.jpg");
   height: 100vh;
   background-position: center;
   background-size: cover;
   position: relative;
 }
-.main-block header {
+main header {
   width: 100%;
 }
-.main-block header h1 {
+main header h1 {
   text-shadow: 0.21vw 0.21vw black;
   font-size: 4.5vw;
   letter-spacing: 0.15vw;
@@ -165,14 +165,44 @@ body {
 
 footer {
   color: white;
-  height: 7.5vh;
+  height: 20vh;
   width: 100%;
   align-items: center;
-  background-color: black;
 }
-footer h1 {
+footer .footer-content {
+  background-color: #080808;
+  height: 70%;
+  display: grid;
+  align-content: center;
+}
+footer .footer-content .credit {
+  text-align: center;
+}
+footer .footer-content .credit p {
   margin: 0;
-  padding-top: 2.5vh;
+  font-size: 2.3vh;
+  color: #b85b14;
+}
+footer .footer-content .credit a {
+  font-size: 2.1vh;
+  color: white;
+  text-decoration: none;
+}
+footer .footer-content .credit a:hover {
+  text-decoration: underline;
+  color: #e1a570;
+}
+footer .footer-content .credit a i {
+  padding-top: 1vh;
+  font-size: 150%;
+}
+footer .footer-signature {
+  background-color: black;
+  height: 30%;
+}
+footer .footer-signature h1 {
+  margin: 0;
+  padding-top: 1.75vh;
   font-size: 2.5vh;
   text-align: center;
 }
@@ -182,10 +212,10 @@ footer h1 {
 }
 
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
-  .main-block {
+  main {
     height: 100vh;
   }
-  .main-block header h1 {
+  main header h1 {
     font-size: 9vw;
     letter-spacing: 4px;
     padding-left: 5vw;
@@ -302,19 +332,22 @@ footer h1 {
     font-size: 4vw;
   }
 
-  footer {
-    height: 10vw;
+  footer .footer-content .credit p {
+    font-size: 2.8vh;
   }
-  footer h1 {
-    padding-top: 2.5vw;
-    font-size: 4.5vw;
+  footer .footer-content .credit a {
+    font-size: 2.4vh;
+  }
+  footer .footer-content .credit a i {
+    padding-top: 1.5vh;
+    font-size: 150%;
   }
 }
 @media only screen and (max-width: 420px) and (orientation: portrait) {
-  .main-block header {
+  main header {
     display: flex;
   }
-  .main-block header h1 {
+  main header h1 {
     padding-left: 0;
     margin-left: auto;
     margin-right: auto;
@@ -342,7 +375,7 @@ footer h1 {
     font-size: 5.5vw;
   }
 }
-@media only screen and (max-width: 732px) and (orientation: landscape) {
+@media only screen and (max-width: 832px) and (orientation: landscape) {
   .main-block header {
     display: flex;
   }
@@ -404,11 +437,26 @@ footer h1 {
   }
 
   footer {
-    height: 8vh;
+    height: 36vh;
   }
-  footer h1 {
-    padding-top: 2vh;
-    font-size: 4vh;
+  footer .footer-content .credit p {
+    font-size: 5vh;
+  }
+  footer .footer-content .credit a {
+    font-size: 4.7vh;
+  }
+  footer .footer-content .credit a i {
+    padding-top: 1.5vh;
+    font-size: 150%;
+  }
+  footer .footer-signature {
+    height: 30%;
+  }
+  footer .footer-signature h1 {
+    margin: 0;
+    padding-top: 2.4vh;
+    font-size: 5vh;
+    text-align: center;
   }
 }
 

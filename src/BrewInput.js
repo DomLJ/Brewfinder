@@ -16,7 +16,6 @@ class BrewInput extends Component {
 
         return (
             <div className="brewinput">
-                
                 <div className="form">
                     <input
                         placeholder="Find Brewery..."

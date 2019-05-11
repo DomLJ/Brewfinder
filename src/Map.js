@@ -3,7 +3,7 @@ import L from 'leaflet';
 
 
 
-class Mapp extends Component {
+class Map extends Component {
     constructor() {
         super()
         this.mapCreating = this.mapCreating.bind(this)
@@ -49,4 +49,4 @@ class Mapp extends Component {
     }
 }
 
-export default Mapp;
+export default Map;

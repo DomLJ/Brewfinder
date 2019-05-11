@@ -3,12 +3,12 @@ import Search from './Search';
 
 function Main() {
     return (
-        <div className="main-block">
+        <main>
             <header >
                 <h1>Brewfinder</h1>
             </header>
             <Search />
-        </div>
+        </main>
     )
 }
 
