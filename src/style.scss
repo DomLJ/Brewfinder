@@ -466,7 +466,7 @@ footer {
   $main-border-radius: 0.38vw;
   $main-border: $main-border-width solid $primary-color;
 
-  .main-block {
+  .main {
     header {
       display: flex;
 
@@ -570,6 +570,43 @@ footer {
         padding-top: 2.4vh;
         font-size: 5vh;
         text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 832px) and (orientation: landscape) and (min-aspect-ratio: 18/4) {
+  footer,
+  header,
+  .output,
+  #map,
+  .map-curtain,
+  ul {
+    display: none;
+  }
+
+  .search {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    .brewinput {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+
+      .form {
+        width: 90%;
+        height: 90%;
+        margin: auto;
+        padding-top: 5vh;
+
+        input {
+          font-size: 5vw;
+          text-indent: 1.5vw;
+          border: 0.67vw solid $primary-color;
+          border-radius: 0.8vw;
+        }
       }
     }
   }

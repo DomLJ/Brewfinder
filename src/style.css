@@ -376,10 +376,10 @@ footer .footer-signature h1 {
   }
 }
 @media only screen and (max-width: 832px) and (orientation: landscape) {
-  .main-block header {
+  .main header {
     display: flex;
   }
-  .main-block header h1 {
+  .main header h1 {
     padding-left: 0;
     margin-left: auto;
     margin-right: auto;
@@ -457,6 +457,39 @@ footer .footer-signature h1 {
     padding-top: 2.4vh;
     font-size: 5vh;
     text-align: center;
+  }
+}
+@media only screen and (max-width: 832px) and (orientation: landscape) and (min-aspect-ratio: 18/4) {
+  footer,
+header,
+.output,
+#map,
+.map-curtain,
+ul {
+    display: none;
+  }
+
+  .search {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .search .brewinput {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .search .brewinput .form {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    padding-top: 5vh;
+  }
+  .search .brewinput .form input {
+    font-size: 5vw;
+    text-indent: 1.5vw;
+    border: 0.67vw solid #b85b14;
+    border-radius: 0.8vw;
   }
 }
 
