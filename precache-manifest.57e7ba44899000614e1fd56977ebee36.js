@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6516086cb3941444541621a275f35e8f",
+    "revision": "be0054f6d5332ab4f16469fef987630a",
     "url": "/Brewfinder/index.html"
   },
   {
-    "revision": "d11f838b383962b775a1",
-    "url": "/Brewfinder/static/css/main.3e4f58d1.chunk.css"
+    "revision": "98ff84b16f68cce978eb",
+    "url": "/Brewfinder/static/css/main.3c2c5245.chunk.css"
   },
   {
     "revision": "803522ecce067a60333c",
     "url": "/Brewfinder/static/js/2.dae347da.chunk.js"
   },
   {
-    "revision": "d11f838b383962b775a1",
+    "revision": "98ff84b16f68cce978eb",
     "url": "/Brewfinder/static/js/main.6adafb82.chunk.js"
   },
   {
