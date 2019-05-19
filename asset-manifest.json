@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/Brewfinder/static/css/main.3c2c5245.chunk.css",
-    "main.js": "/Brewfinder/static/js/main.6adafb82.chunk.js",
-    "main.js.map": "/Brewfinder/static/js/main.6adafb82.chunk.js.map",
+    "main.css": "/Brewfinder/static/css/main.e9aab3e3.chunk.css",
+    "main.js": "/Brewfinder/static/js/main.67f84590.chunk.js",
+    "main.js.map": "/Brewfinder/static/js/main.67f84590.chunk.js.map",
     "runtime~main.js": "/Brewfinder/static/js/runtime~main.61fe2796.js",
     "runtime~main.js.map": "/Brewfinder/static/js/runtime~main.61fe2796.js.map",
     "static/js/2.dae347da.chunk.js": "/Brewfinder/static/js/2.dae347da.chunk.js",
     "static/js/2.dae347da.chunk.js.map": "/Brewfinder/static/js/2.dae347da.chunk.js.map",
     "index.html": "/Brewfinder/index.html",
-    "precache-manifest.57e7ba44899000614e1fd56977ebee36.js": "/Brewfinder/precache-manifest.57e7ba44899000614e1fd56977ebee36.js",
+    "precache-manifest.58c985a18a8588e3983329eab9ab096d.js": "/Brewfinder/precache-manifest.58c985a18a8588e3983329eab9ab096d.js",
     "service-worker.js": "/Brewfinder/service-worker.js",
-    "static/css/main.3c2c5245.chunk.css.map": "/Brewfinder/static/css/main.3c2c5245.chunk.css.map",
-    "static/media/style.css": "/Brewfinder/static/media/claude-piche-1169584-unsplash.508245a5.jpg"
+    "static/css/main.e9aab3e3.chunk.css.map": "/Brewfinder/static/css/main.e9aab3e3.chunk.css.map"
   }
 }
