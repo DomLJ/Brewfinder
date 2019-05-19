@@ -1,17 +1,14 @@
-@import url("https://fonts.googleapis.com/css?family=Patua+One");
+@import url("https://fonts.googleapis.com/css?family=Heebo&display=swap");
 
-$primary-color: #b85b14;
-$secondary-color: #e1a570;
-$main-border-width: 0.27vw;
+$main-border-width: 0.2vw;
 $main-border-radius: 0.31vw;
-$main-border: $main-border-width solid $primary-color;
 
 body {
   margin: 0px;
 }
 
 main {
-  background-image: url("img/claude-piche-1169584-unsplash.jpg");
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -21,24 +18,24 @@ main {
     width: 100%;
 
     h1 {
-      text-shadow: 0.21vw 0.21vw black;
-      font-size: 4.5vw;
-      letter-spacing: 0.15vw;
-      font-family: "Patua One", cursive;
-      color: $primary-color;
-      font-weight: 650;
+      font-size: 5.3vw;
+      text-shadow: 2px 3px black;
+      font-family: "Heebo", sans-serif;
+      color: white;
+      font-weight: 900;
       margin-top: 0;
       padding-top: 2vh;
-      padding-left: 5.8vw;
+      padding-left: 4.65vw;
+      margin-bottom: 0;
     }
   }
 }
 
 .search {
-  height: 68%;
+  height: 73%;
   width: 92.2%;
   position: relative;
-  margin-top: 6vh;
+  margin-top: 4.5vh;
   margin-left: 2.3%;
 
   .brewinput {
@@ -59,21 +56,23 @@ main {
         box-sizing: border-box;
         font-size: 2.1vw;
         text-indent: 0.5vw;
-        border: $main-border;
+        border: 0;
         border-radius: $main-border-radius;
 
         &:focus {
-          outline-color: $primary-color;
+          outline: none;
         }
       }
     }
 
     ul {
       list-style-type: none;
-      width: 85%;
+      width: 84%;
       height: 50%;
-      padding: 0;
       margin: auto;
+      padding: 0;
+      padding-top: $main-border-width;
+
       z-index: 3;
       background-color: none;
 
@@ -86,19 +85,24 @@ main {
         border-right: $main-border-width;
         border-top: 0;
         border-style: solid;
-        border-color: $primary-color;
+        border-color: #24243e;
         display: flex;
         align-items: center;
         background-color: white;
         z-index: 5;
 
+        &:first-child {
+          border-top: $main-border-width;
+          border-radius: $main-border-radius $main-border-radius 0px 0px;
+        }
+
         &:last-child {
-          border-radius: $main-border-radius;
+          border-radius: 0px 0px $main-border-radius $main-border-radius;
         }
 
         &:hover {
           color: white;
-          background-color: $primary-color;
+          background-color: #302b63;
           cursor: pointer;
         }
 
@@ -123,7 +127,6 @@ main {
       margin-left: 7.5%;
       margin-right: 7.5%;
       background-color: white;
-      border: $main-border;
       border-radius: $main-border-radius;
       box-sizing: border-box;
 
@@ -133,10 +136,10 @@ main {
         padding-left: 10%;
         padding-right: 10%;
         padding-top: 5%;
-        color: $primary-color;
+        color: black;
 
         &:first-child {
-          color: black;
+          padding-top: 2.4%;
           font-size: 2.2vw;
         }
       }
@@ -144,12 +147,12 @@ main {
       a {
         font-size: 1.8vw;
         text-align: center;
-        color: $primary-color;
+        color: #302b63;
         word-wrap: break-word;
 
         &:hover,
         &:visited {
-          color: $secondary-color;
+          color: #606092;
         }
       }
     }
@@ -162,7 +165,6 @@ main {
     right: 0;
     box-sizing: border-box;
     z-index: 0;
-    border: $main-border;
     border-radius: $main-border-radius;
   }
 
@@ -175,7 +177,6 @@ main {
     z-index: 1;
     opacity: 0.6;
     background-color: whitesmoke;
-    border: $main-border;
     border-radius: $main-border-radius;
 
     h1 {
@@ -192,49 +193,45 @@ main {
 
 footer {
   color: white;
-  height: 20vh;
+  height: 18vh;
   width: 100%;
   align-items: center;
+  background-image: linear-gradient(to right, #000000,#1b1b1b,#181616, #1b1b1b, #000000, #181616,#000000);
 
   .footer-content {
-    background-color: #080808;
-    height: 70%;
+    height: 100%;
     display: grid;
-    align-content: center;
 
-    .credit {
+    & * {
       text-align: center;
-      p {
-        margin: 0;
-        font-size: 2.3vh;
-        color: $primary-color;
+      height: 26%;
+      font-size: 2.8vh;
+    }
+
+    p {
+      padding-top: 0.2vh;
+      margin: 0;
+      color: red;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 2.5vh;
+      &:hover {
+        text-decoration: none;
+        color: #e1a570;
       }
 
-      a {
-        font-size: 2.1vh;
-        color: white;
-        text-decoration: none;
-        &:hover {
-          text-decoration: underline;
-          color: $secondary-color;
-        }
-
-        i {
-          padding-top: 1vh;
-          font-size: 150%;
-        }
+      i {
+        padding-top: 0.2vh;
+        font-size: 125%;
       }
     }
-  }
 
-  .footer-signature {
-    background-color: black;
-    height: 30%;
-    h1 {
-      margin: 0;
-      padding-top: 1.75vh;
-      font-size: 2.5vh;
-      text-align: center;
+    .signature {
+      font-size: 3vh;
+      color: white;
     }
   }
 }
@@ -246,22 +243,24 @@ footer {
 @media only screen and (max-width: 1024px) and (orientation: portrait) {
   $main-border-width: 0.95vw;
   $main-border-radius: 1.2vw;
-  $main-border: $main-border-width solid $primary-color;
 
   main {
     height: 100vh;
 
     header {
+      display: flex;
+
       h1 {
-        font-size: 9vw;
-        letter-spacing: 4px;
-        padding-left: 5vw;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 8.6vw;
       }
     }
   }
 
   .search {
-    height: 86%;
+    height: 90%;
     width: 90%;
     position: absolute;
     margin: 0;
@@ -277,7 +276,7 @@ footer {
 
       .form {
         width: 100%;
-        height: 32%;
+        height: 28%;
         margin: auto;
         padding: 0;
 
@@ -285,24 +284,25 @@ footer {
           width: 100%;
           height: 100%;
           box-sizing: border-box;
-          font-size: 4vw;
+          font-size: 5vw;
           text-indent: 1vw;
-          border: $main-border;
+
+          border: 0;
           border-radius: $main-border-radius;
 
           &:focus {
-            outline-color: $primary-color;
+            outline: none;
           }
         }
       }
 
       ul {
-        position: absolute;
         list-style-type: none;
-        width: 100%;
+        width: 96%;
         height: 150%;
-        padding: 0;
         margin: auto;
+        padding: 0;
+        padding-top: $main-border-width;
         background-color: none;
 
         li {
@@ -314,12 +314,15 @@ footer {
           border-right: $main-border-width;
           border-top: 0;
           border-style: solid;
-          border-color: $primary-color;
+          border-color: #24243e;
 
-          &:hover {
-            color: white;
-            background-color: $primary-color;
-            cursor: pointer;
+          &:first-child {
+            border-top: $main-border-width;
+            border-radius: $main-border-radius $main-border-radius 0px 0px;
+          }
+
+          &:last-child {
+            border-radius: 0px 0px $main-border-radius $main-border-radius;
           }
 
           p {
@@ -332,11 +335,11 @@ footer {
       .output {
         position: absolute;
         z-index: -1;
-        height: 62%;
+        height: 64%;
         width: 100%;
-        top: 35%;
+        top: 32%;
         margin: 0;
-        border: $main-border;
+
         border-radius: $main-border-radius;
 
         h2 {
@@ -346,7 +349,7 @@ footer {
           font-size: 4vw;
           padding-left: 8%;
           padding-right: 8%;
-          color: $primary-color;
+          color: black;
 
           &:first-child {
             font-size: 4.6vw;
@@ -361,7 +364,7 @@ footer {
 
     .map-container {
       position: absolute;
-      height: 55%;
+      height: 57%;
       width: 100%;
       top: 40%;
 
@@ -371,7 +374,6 @@ footer {
         width: 100%;
         box-sizing: border-box;
         z-index: 0;
-        border: $main-border;
         border-radius: $main-border-radius;
       }
 
@@ -408,18 +410,6 @@ footer {
 }
 
 @media only screen and (max-width: 420px) and (orientation: portrait) {
-  main {
-    header {
-      display: flex;
-
-      h1 {
-        padding-left: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-  }
-
   .search {
     .brewinput {
       .form {
@@ -441,10 +431,11 @@ footer {
       }
       .output {
         h2 {
-          margin-top: 1.2vh;
+          margin-top: 1vh;
           font-size: 4.8vw;
 
           &:first-child {
+            padding-top: 0;
             font-size: 5.3vw;
           }
         }
@@ -464,17 +455,11 @@ footer {
 @media only screen and (max-width: 832px) and (orientation: landscape) {
   $main-border-width: 0.4vw;
   $main-border-radius: 0.38vw;
-  $main-border: $main-border-width solid $primary-color;
 
-  .main {
+  main {
     header {
-      display: flex;
-
       h1 {
-        padding-left: 0;
-        margin-left: auto;
-        margin-right: auto;
-        letter-spacing: 4px;
+        padding-left: 4vw;
       }
     }
   }
@@ -490,7 +475,6 @@ footer {
         input {
           font-size: 2.5vw;
           text-indent: 1vw;
-          border: $main-border;
           border-radius: $main-border-radius;
         }
       }
@@ -498,15 +482,6 @@ footer {
       ul {
         li {
           height: 11.2%;
-          border-bottom: $main-border-width;
-          border-left: $main-border-width;
-          border-right: $main-border-width;
-          border-style: solid;
-          border-color: $primary-color;
-
-          &:last-child {
-            border-radius: $main-border-radius;
-          }
 
           p {
             font-size: 1.8vw;
@@ -515,9 +490,7 @@ footer {
         }
       }
       .output {
-        border: $main-border;
         border-radius: $main-border-radius;
-
         h2 {
           margin-top: 1.2vh;
           font-size: 2.1vw;
@@ -531,45 +504,14 @@ footer {
 
     .map-container {
       #map {
-        border: $main-border;
         border-radius: $main-border-radius;
       }
 
       .map-curtain {
-        border: $main-border;
         border-radius: $main-border-radius;
         h1 {
           font-size: 3.5vw;
         }
-      }
-    }
-  }
-
-  footer {
-    height: 36vh;
-    .footer-content {
-      .credit {
-        p {
-          font-size: 5vh;
-        }
-
-        a {
-          font-size: 4.7vh;
-
-          i {
-            padding-top: 1.5vh;
-            font-size: 150%;
-          }
-        }
-      }
-    }
-    .footer-signature {
-      height: 30%;
-      h1 {
-        margin: 0;
-        padding-top: 2.4vh;
-        font-size: 5vh;
-        text-align: center;
       }
     }
   }
@@ -604,7 +546,6 @@ footer {
         input {
           font-size: 5vw;
           text-indent: 1.5vw;
-          border: 0.67vw solid $primary-color;
           border-radius: 0.8vw;
         }
       }

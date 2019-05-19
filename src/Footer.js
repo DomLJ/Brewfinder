@@ -6,7 +6,7 @@ function Footer() {
         <footer>
             <div className="footer-content">
 
-                <div className="credit">
+                
                     <p>Powered by</p>
                     <a
                         href="https://www.openbrewerydb.org"
@@ -15,10 +15,10 @@ function Footer() {
                     >
                         Open Brewery DB
                     </a>
-                </div>
+                
 
-                <div className="credit">
-                    
+               
+
                     <a
                         href="https://github.com/DomLJ/Brewfinder"
                         target="_blank"
@@ -26,12 +26,12 @@ function Footer() {
                     >
                         <i className="fab fa-github"></i>
                     </a>
-                </div>
+                
 
-
+                <p className="signature"> Created by Dominik Józefiak </p>
 
             </div>
-            <div className="footer-signature"><h1> Created by Dominik Józefiak </h1></div>
+
         </footer>
     )
 }

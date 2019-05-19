@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=Patua+One");
+@import url("https://fonts.googleapis.com/css?family=Heebo&display=swap");
 body {
   margin: 0px;
 }
 
 main {
-  background-image: url("img/claude-piche-1169584-unsplash.jpg");
+  background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   height: 100vh;
   background-position: center;
   background-size: cover;
@@ -14,22 +14,22 @@ main header {
   width: 100%;
 }
 main header h1 {
-  text-shadow: 0.21vw 0.21vw black;
-  font-size: 4.5vw;
-  letter-spacing: 0.15vw;
-  font-family: "Patua One", cursive;
-  color: #b85b14;
-  font-weight: 650;
+  font-size: 5.3vw;
+  text-shadow: 2px 3px black;
+  font-family: "Heebo", sans-serif;
+  color: white;
+  font-weight: 900;
   margin-top: 0;
   padding-top: 2vh;
-  padding-left: 5.8vw;
+  padding-left: 4.65vw;
+  margin-bottom: 0;
 }
 
 .search {
-  height: 68%;
+  height: 73%;
   width: 92.2%;
   position: relative;
-  margin-top: 6vh;
+  margin-top: 4.5vh;
   margin-left: 2.3%;
 }
 .search .brewinput {
@@ -50,18 +50,19 @@ main header h1 {
   box-sizing: border-box;
   font-size: 2.1vw;
   text-indent: 0.5vw;
-  border: 0.27vw solid #b85b14;
+  border: 0;
   border-radius: 0.31vw;
 }
 .search .brewinput .form input:focus {
-  outline-color: #b85b14;
+  outline: none;
 }
 .search .brewinput ul {
   list-style-type: none;
-  width: 85%;
+  width: 84%;
   height: 50%;
-  padding: 0;
   margin: auto;
+  padding: 0;
+  padding-top: 0.2vw;
   z-index: 3;
   background-color: none;
 }
@@ -69,23 +70,27 @@ main header h1 {
   width: 100%;
   height: 9.9%;
   box-sizing: border-box;
-  border-bottom: 0.27vw;
-  border-left: 0.27vw;
-  border-right: 0.27vw;
+  border-bottom: 0.2vw;
+  border-left: 0.2vw;
+  border-right: 0.2vw;
   border-top: 0;
   border-style: solid;
-  border-color: #b85b14;
+  border-color: #24243e;
   display: flex;
   align-items: center;
   background-color: white;
   z-index: 5;
 }
+.search .brewinput ul li:first-child {
+  border-top: 0.2vw;
+  border-radius: 0.31vw 0.31vw 0px 0px;
+}
 .search .brewinput ul li:last-child {
-  border-radius: 0.31vw;
+  border-radius: 0px 0px 0.31vw 0.31vw;
 }
 .search .brewinput ul li:hover {
   color: white;
-  background-color: #b85b14;
+  background-color: #302b63;
   cursor: pointer;
 }
 .search .brewinput ul li p {
@@ -106,7 +111,6 @@ main header h1 {
   margin-left: 7.5%;
   margin-right: 7.5%;
   background-color: white;
-  border: 0.27vw solid #b85b14;
   border-radius: 0.31vw;
   box-sizing: border-box;
 }
@@ -116,20 +120,20 @@ main header h1 {
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 5%;
-  color: #b85b14;
+  color: black;
 }
 .search .brewinput .output h2:first-child {
-  color: black;
+  padding-top: 2.4%;
   font-size: 2.2vw;
 }
 .search .brewinput .output a {
   font-size: 1.8vw;
   text-align: center;
-  color: #b85b14;
+  color: #302b63;
   word-wrap: break-word;
 }
 .search .brewinput .output a:hover, .search .brewinput .output a:visited {
-  color: #e1a570;
+  color: #606092;
 }
 .search #map {
   position: absolute;
@@ -138,7 +142,6 @@ main header h1 {
   right: 0;
   box-sizing: border-box;
   z-index: 0;
-  border: 0.27vw solid #b85b14;
   border-radius: 0.31vw;
 }
 .search .map-curtain {
@@ -150,7 +153,6 @@ main header h1 {
   z-index: 1;
   opacity: 0.6;
   background-color: whitesmoke;
-  border: 0.27vw solid #b85b14;
   border-radius: 0.31vw;
 }
 .search .map-curtain h1 {
@@ -165,46 +167,41 @@ main header h1 {
 
 footer {
   color: white;
-  height: 20vh;
+  height: 18vh;
   width: 100%;
   align-items: center;
+  background-image: linear-gradient(to right, #000000, #1b1b1b, #181616, #1b1b1b, #000000, #181616, #000000);
 }
 footer .footer-content {
-  background-color: #080808;
-  height: 70%;
+  height: 100%;
   display: grid;
-  align-content: center;
 }
-footer .footer-content .credit {
+footer .footer-content * {
   text-align: center;
+  height: 26%;
+  font-size: 2.8vh;
 }
-footer .footer-content .credit p {
+footer .footer-content p {
+  padding-top: 0.2vh;
   margin: 0;
-  font-size: 2.3vh;
-  color: #b85b14;
+  color: red;
 }
-footer .footer-content .credit a {
-  font-size: 2.1vh;
+footer .footer-content a {
   color: white;
   text-decoration: none;
+  font-size: 2.5vh;
 }
-footer .footer-content .credit a:hover {
-  text-decoration: underline;
+footer .footer-content a:hover {
+  text-decoration: none;
   color: #e1a570;
 }
-footer .footer-content .credit a i {
-  padding-top: 1vh;
-  font-size: 150%;
+footer .footer-content a i {
+  padding-top: 0.2vh;
+  font-size: 125%;
 }
-footer .footer-signature {
-  background-color: black;
-  height: 30%;
-}
-footer .footer-signature h1 {
-  margin: 0;
-  padding-top: 1.75vh;
-  font-size: 2.5vh;
-  text-align: center;
+footer .footer-content .signature {
+  font-size: 3vh;
+  color: white;
 }
 
 .invisible {
@@ -215,14 +212,18 @@ footer .footer-signature h1 {
   main {
     height: 100vh;
   }
+  main header {
+    display: flex;
+  }
   main header h1 {
-    font-size: 9vw;
-    letter-spacing: 4px;
-    padding-left: 5vw;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 8.6vw;
   }
 
   .search {
-    height: 86%;
+    height: 90%;
     width: 90%;
     position: absolute;
     margin: 0;
@@ -238,7 +239,7 @@ footer .footer-signature h1 {
   }
   .search .brewinput .form {
     width: 100%;
-    height: 32%;
+    height: 28%;
     margin: auto;
     padding: 0;
   }
@@ -246,21 +247,21 @@ footer .footer-signature h1 {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    font-size: 4vw;
+    font-size: 5vw;
     text-indent: 1vw;
-    border: 0.95vw solid #b85b14;
+    border: 0;
     border-radius: 1.2vw;
   }
   .search .brewinput .form input:focus {
-    outline-color: #b85b14;
+    outline: none;
   }
   .search .brewinput ul {
-    position: absolute;
     list-style-type: none;
-    width: 100%;
+    width: 96%;
     height: 150%;
-    padding: 0;
     margin: auto;
+    padding: 0;
+    padding-top: 0.95vw;
     background-color: none;
   }
   .search .brewinput ul li {
@@ -272,12 +273,14 @@ footer .footer-signature h1 {
     border-right: 0.95vw;
     border-top: 0;
     border-style: solid;
-    border-color: #b85b14;
+    border-color: #24243e;
   }
-  .search .brewinput ul li:hover {
-    color: white;
-    background-color: #b85b14;
-    cursor: pointer;
+  .search .brewinput ul li:first-child {
+    border-top: 0.95vw;
+    border-radius: 1.2vw 1.2vw 0px 0px;
+  }
+  .search .brewinput ul li:last-child {
+    border-radius: 0px 0px 1.2vw 1.2vw;
   }
   .search .brewinput ul li p {
     font-size: 2.9vw;
@@ -286,11 +289,10 @@ footer .footer-signature h1 {
   .search .brewinput .output {
     position: absolute;
     z-index: -1;
-    height: 62%;
+    height: 64%;
     width: 100%;
-    top: 35%;
+    top: 32%;
     margin: 0;
-    border: 0.95vw solid #b85b14;
     border-radius: 1.2vw;
   }
   .search .brewinput .output h2 {
@@ -300,7 +302,7 @@ footer .footer-signature h1 {
     font-size: 4vw;
     padding-left: 8%;
     padding-right: 8%;
-    color: #b85b14;
+    color: black;
   }
   .search .brewinput .output h2:first-child {
     font-size: 4.6vw;
@@ -310,7 +312,7 @@ footer .footer-signature h1 {
   }
   .search .map-container {
     position: absolute;
-    height: 55%;
+    height: 57%;
     width: 100%;
     top: 40%;
   }
@@ -320,7 +322,6 @@ footer .footer-signature h1 {
     width: 100%;
     box-sizing: border-box;
     z-index: 0;
-    border: 0.95vw solid #b85b14;
     border-radius: 1.2vw;
   }
   .search .map-container .map-curtain {
@@ -344,15 +345,6 @@ footer .footer-signature h1 {
   }
 }
 @media only screen and (max-width: 420px) and (orientation: portrait) {
-  main header {
-    display: flex;
-  }
-  main header h1 {
-    padding-left: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .search .brewinput .form input {
     font-size: 7.5vw;
     text-indent: 2vw;
@@ -365,10 +357,11 @@ footer .footer-signature h1 {
     padding-left: 1.9vw;
   }
   .search .brewinput .output h2 {
-    margin-top: 1.2vh;
+    margin-top: 1vh;
     font-size: 4.8vw;
   }
   .search .brewinput .output h2:first-child {
+    padding-top: 0;
     font-size: 5.3vw;
   }
   .search .map-container .map-curtain h1 {
@@ -376,14 +369,8 @@ footer .footer-signature h1 {
   }
 }
 @media only screen and (max-width: 832px) and (orientation: landscape) {
-  .main header {
-    display: flex;
-  }
-  .main header h1 {
-    padding-left: 0;
-    margin-left: auto;
-    margin-right: auto;
-    letter-spacing: 4px;
+  main header h1 {
+    padding-left: 4vw;
   }
 
   .search {
@@ -395,26 +382,16 @@ footer .footer-signature h1 {
   .search .brewinput .form input {
     font-size: 2.5vw;
     text-indent: 1vw;
-    border: 0.4vw solid #b85b14;
     border-radius: 0.38vw;
   }
   .search .brewinput ul li {
     height: 11.2%;
-    border-bottom: 0.4vw;
-    border-left: 0.4vw;
-    border-right: 0.4vw;
-    border-style: solid;
-    border-color: #b85b14;
-  }
-  .search .brewinput ul li:last-child {
-    border-radius: 0.38vw;
   }
   .search .brewinput ul li p {
     font-size: 1.8vw;
     padding-left: 1vw;
   }
   .search .brewinput .output {
-    border: 0.4vw solid #b85b14;
     border-radius: 0.38vw;
   }
   .search .brewinput .output h2 {
@@ -425,38 +402,13 @@ footer .footer-signature h1 {
     font-size: 2.7vw;
   }
   .search .map-container #map {
-    border: 0.4vw solid #b85b14;
     border-radius: 0.38vw;
   }
   .search .map-container .map-curtain {
-    border: 0.4vw solid #b85b14;
     border-radius: 0.38vw;
   }
   .search .map-container .map-curtain h1 {
     font-size: 3.5vw;
-  }
-
-  footer {
-    height: 36vh;
-  }
-  footer .footer-content .credit p {
-    font-size: 5vh;
-  }
-  footer .footer-content .credit a {
-    font-size: 4.7vh;
-  }
-  footer .footer-content .credit a i {
-    padding-top: 1.5vh;
-    font-size: 150%;
-  }
-  footer .footer-signature {
-    height: 30%;
-  }
-  footer .footer-signature h1 {
-    margin: 0;
-    padding-top: 2.4vh;
-    font-size: 5vh;
-    text-align: center;
   }
 }
 @media only screen and (max-width: 832px) and (orientation: landscape) and (min-aspect-ratio: 18/4) {
@@ -488,7 +440,6 @@ ul {
   .search .brewinput .form input {
     font-size: 5vw;
     text-indent: 1.5vw;
-    border: 0.67vw solid #b85b14;
     border-radius: 0.8vw;
   }
 }
