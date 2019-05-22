@@ -196,7 +196,7 @@ footer {
   height: 18vh;
   width: 100%;
   align-items: center;
-  background-image: linear-gradient(to right, #000000,#1b1b1b,#181616, #1b1b1b, #000000, #181616,#000000);
+  background-image: linear-gradient(to right, #000000, #1b1b1b, #000000);
 
   .footer-content {
     height: 100%;
@@ -452,66 +452,179 @@ footer {
   }
 }
 
-@media only screen and (max-width: 832px) and (orientation: landscape) {
-  $main-border-width: 0.4vw;
-  $main-border-radius: 0.38vw;
+@media only screen and (max-width: 450px) and (orientation: landscape) {
+  $main-border-width: 0.85vw;
+  $main-border-radius: 1.28vw;
 
   main {
+    height: 180vh;
+
     header {
+      display: flex;
+
       h1 {
-        padding-left: 4vw;
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 8.6vw;
       }
     }
   }
 
   .search {
+    height: 90%;
+    width: 90%;
+    position: absolute;
+    margin: 0;
     margin-top: 0;
-    height: 78%;
-    width: 95%;
-    margin-left: 1.3%;
+    left: 5%;
 
     .brewinput {
+      position: absolute;
+      height: 40%;
+      width: 100%;
+      z-index: 2;
+      left: 0;
+
       .form {
+        width: 100%;
+        height: 28%;
+        margin: auto;
+        padding: 0;
+
         input {
-          font-size: 2.5vw;
+          width: 100%;
+          height: 100%;
+          box-sizing: border-box;
+          font-size: 5vw;
           text-indent: 1vw;
+
+          border: 0;
           border-radius: $main-border-radius;
+
+          &:focus {
+            outline: none;
+          }
         }
       }
 
       ul {
+        list-style-type: none;
+        width: 96%;
+        height: 150%;
+        margin: auto;
+        padding: 0;
+        padding-top: $main-border-width;
+        background-color: none;
+
         li {
-          height: 11.2%;
+          width: 100%;
+          height: 9.3%;
+          box-sizing: border-box;
+          border-bottom: $main-border-width;
+          border-left: $main-border-width;
+          border-right: $main-border-width;
+          border-top: 0;
+          border-style: solid;
+          border-color: #24243e;
+
+          &:first-child {
+            border-top: $main-border-width;
+            border-radius: $main-border-radius $main-border-radius 0px 0px;
+          }
+
+          &:last-child {
+            border-radius: 0px 0px $main-border-radius $main-border-radius;
+          }
 
           p {
-            font-size: 1.8vw;
+            font-size: 2.9vw;
             padding-left: 1vw;
           }
         }
       }
+
       .output {
+        position: absolute;
+        z-index: -1;
+        height: 64%;
+        width: 100%;
+        top: 32%;
+        margin: 0;
+
         border-radius: $main-border-radius;
+
         h2 {
-          margin-top: 1.2vh;
-          font-size: 2.1vw;
+          margin-bottom: 0;
+          margin-top: 0.9vh;
+          padding-top: 0;
+          font-size: 4vw;
+          padding-left: 8%;
+          padding-right: 8%;
+          color: black;
 
           &:first-child {
-            font-size: 2.7vw;
+            font-size: 4.6vw;
+          }
+
+          a {
+            font-size: 3.7vw;
           }
         }
       }
     }
 
     .map-container {
+      position: absolute;
+      height: 57%;
+      width: 100%;
+      top: 40%;
+
       #map {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 0;
         border-radius: $main-border-radius;
       }
 
       .map-curtain {
+        position: absolute;
+        height: 100%;
+        width: 100%;
         border-radius: $main-border-radius;
         h1 {
-          font-size: 3.5vw;
+          font-size: 4vw;
         }
+      }
+    }
+  }
+
+  footer {
+    height: 40vh;
+
+    .footer-content {
+      & * {
+        font-size: 4.8vh;
+      }
+
+      p {
+        padding-top: 1.8vh;
+        margin: 0;
+      }
+
+      a {
+        font-size: 4.5vh;
+        
+        i {
+          padding-top: 1.2vh;
+          font-size: 125%;
+        }
+      }
+
+      .signature {
+        font-size: 5vh;
       }
     }
   }
