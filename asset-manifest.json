@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Brewfinder/static/css/main.e9aab3e3.chunk.css",
+    "main.css": "/Brewfinder/static/css/main.eeba9965.chunk.css",
     "main.js": "/Brewfinder/static/js/main.67f84590.chunk.js",
     "main.js.map": "/Brewfinder/static/js/main.67f84590.chunk.js.map",
     "runtime~main.js": "/Brewfinder/static/js/runtime~main.61fe2796.js",
@@ -8,8 +8,8 @@
     "static/js/2.dae347da.chunk.js": "/Brewfinder/static/js/2.dae347da.chunk.js",
     "static/js/2.dae347da.chunk.js.map": "/Brewfinder/static/js/2.dae347da.chunk.js.map",
     "index.html": "/Brewfinder/index.html",
-    "precache-manifest.58c985a18a8588e3983329eab9ab096d.js": "/Brewfinder/precache-manifest.58c985a18a8588e3983329eab9ab096d.js",
+    "precache-manifest.86382a5222094a7755d40d0234fb9425.js": "/Brewfinder/precache-manifest.86382a5222094a7755d40d0234fb9425.js",
     "service-worker.js": "/Brewfinder/service-worker.js",
-    "static/css/main.e9aab3e3.chunk.css.map": "/Brewfinder/static/css/main.e9aab3e3.chunk.css.map"
+    "static/css/main.eeba9965.chunk.css.map": "/Brewfinder/static/css/main.eeba9965.chunk.css.map"
   }
 }
