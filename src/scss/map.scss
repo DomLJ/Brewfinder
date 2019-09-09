@@ -1,0 +1,56 @@
+.map {
+  position: absolute;
+  height: 52%;
+  width: 55%;
+  right: $horizontal-margin-desktop;
+  bottom: 5%;
+  box-shadow: 2px 2px 4px $dark-two;
+  border-radius: $main-border-radius;
+  
+  &__content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 0;
+    border-radius: inherit;
+  }
+
+  &__curtain {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    opacity: 0.6;
+    background-color: whitesmoke;
+    border-radius: inherit;
+  }
+
+  &__explanation {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.4em;
+  }
+
+  .invisible {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .map {
+    height: 53.7%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .map {
+    @include mobile-width;
+    height: 46%;
+  }
+}

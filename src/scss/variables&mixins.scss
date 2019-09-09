@@ -1,0 +1,9 @@
+$nsbp: "\00a0\00a0";
+
+$horizontal-margin-desktop: 4%;
+
+$main-border-radius: 9px;
+
+@mixin mobile-width {
+  width: calc(100% - #{$horizontal-margin-desktop} * 2);
+}

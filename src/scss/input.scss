@@ -1,0 +1,39 @@
+.input {
+  display: block;
+  position: absolute;
+  top: 5%;
+  left: $horizontal-margin-desktop;
+  width: 35%;
+  height: 5%;
+  box-sizing: border-box;
+  color: $green-darker;
+  background-color: $dark-five;
+  text-indent: 9px;
+  border: 0;
+  border-radius: $main-border-radius;
+  font-size: 1.2em;
+  box-shadow: 2px 2px 4px $dark-two;
+
+  &::placeholder {
+    color: $green-darker;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--active {
+    @extend .input;
+    background-color: $dark-six;
+    border-radius: $main-border-radius $main-border-radius 0 0;
+    box-shadow: 2px 2px 4px $dark-two;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .input {
+    @include mobile-width;
+    font-size: 1.1em;
+    text-indent: 7px;
+  }
+}

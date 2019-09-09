@@ -1,0 +1,11 @@
+.main {
+  height: calc(100vh - 132px);
+  position: relative;
+}
+
+@media only screen and (max-width: 435px) {
+  .main {
+    height: calc(100vh - 152px);
+    min-height: 400px;
+  }
+}

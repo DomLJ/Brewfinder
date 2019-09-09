@@ -1,0 +1,34 @@
+.header {
+  width: 100%;
+  height: 72px;
+  background-color: $dark-six;
+  box-shadow: 0px 2px 4px $dark-two;
+  position: relative;
+
+  &__title {
+    position: absolute;
+    font-size: 2.4em;
+    font-family: "Heebo", sans-serif;
+    color: $green-darker;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    left: $horizontal-margin-desktop;
+  }
+
+  &__link {
+    position: absolute;
+    font-size: 2.4em;
+    color: $green-darker;
+    right: $horizontal-margin-desktop;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    &:hover {
+      color: $green-basic;
+    }
+  }
+}
