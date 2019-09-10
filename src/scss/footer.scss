@@ -22,9 +22,9 @@
 
   &__link {
     color: $green-darker;
-    text-decoration: none;
-
+    
     &::before {
+      display:inline-block;
       content: $nsbp;
     }
 

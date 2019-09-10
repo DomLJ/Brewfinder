@@ -17,7 +17,7 @@ class Main extends Component {
                 latitude: '40.730610',
                 longitude: '-73.935242'
             },
-            isAutocompleteVisible: false
+            isSuggestionsVisible: false
         }
         this.submitAutocomplete = this.submitAutocomplete.bind(this)
         this.pickBrewery = this.pickBrewery.bind(this)
@@ -34,7 +34,7 @@ class Main extends Component {
         if (value) {
             this.setState({
                 search: value,
-                isAutocompleteVisible: true
+                isSuggestionsVisible: true
             }, debounce(() => {
                 fetch(`https://api.openbrewerydb.org/breweries/autocomplete?query=${this.state.search}`)
                     .then(this.handleErrors)
@@ -46,12 +46,11 @@ class Main extends Component {
                     }
                     )
                     .catch(console.log)
-            }, 500)
-            )
+            }, 500))
         } else {
             this.setState({
                 search: value,
-                isAutocompleteVisible: false
+                isSuggestionsVisible: false
             })
         }
     }
@@ -66,7 +65,8 @@ class Main extends Component {
                             chosenBrewery: result,
                             key: prevState.key + 1,
                             search: result.name,
-                            isAutocompleteVisible: false
+                            isSuggestionsVisible: false,
+                            autocompleteResult: []
                         }
                     })
                 }
@@ -79,13 +79,13 @@ class Main extends Component {
                 <Input
                     autocomplete={this.submitAutocomplete}
                     inputValue={this.state.search}
-                    isAutocompleteVisible={this.state.isAutocompleteVisible}
+                    isSuggestionsVisible={this.state.isSuggestionsVisible}
                 />
                 <Suggestions
                     autocomplete={this.submitAutocomplete}
                     autocompleteResult={this.state.autocompleteResult}
                     pickBrewery={this.pickBrewery}
-                    isAutocompleteVisible={this.state.isAutocompleteVisible}
+                    isSuggestionsVisible={this.state.isSuggestionsVisible}
                     id={this.state.key}
                 />
                 <BreweryData

@@ -1,10 +1,11 @@
 import React from 'react'
 
-function AutocompleteTile(props) {
+function SuggestionTile(props) {
     return (
         <li className='suggestions__item'>
             <button
-                className='suggestions__button'
+                
+                className={`${props.cursor === props.i ? 'active' : null} suggestions__button`}
                 id={props.breweryId}
                 onClick={props.pickBrewery}
             >
@@ -13,4 +14,4 @@ function AutocompleteTile(props) {
         </li>
     )
 }
-export default AutocompleteTile
+export default SuggestionTile

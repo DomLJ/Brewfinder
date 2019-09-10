@@ -7,8 +7,9 @@
   height: 5%;
   box-sizing: border-box;
   color: $green-darker;
+  font-family: "Heebo", sans-serif;
   background-color: $dark-five;
-  text-indent: 9px;
+  text-indent: 6px;
   border: 0;
   border-radius: $main-border-radius;
   font-size: 1.2em;
@@ -18,12 +19,7 @@
     color: $green-darker;
   }
 
-  &:focus {
-    outline: none;
-  }
-
   &--active {
-    @extend .input;
     background-color: $dark-six;
     border-radius: $main-border-radius $main-border-radius 0 0;
     box-shadow: 2px 2px 4px $dark-two;
@@ -34,6 +30,5 @@
   .input {
     @include mobile-width;
     font-size: 1.1em;
-    text-indent: 7px;
   }
 }

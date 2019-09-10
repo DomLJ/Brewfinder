@@ -9,8 +9,6 @@ function Footer() {
                     <a
                         className='footer__link'
                         href='https://www.openbrewerydb.org'
-                        target='_blank'
-                        rel='noopener noreferrer'
                     >
                         Open Brewery DB
                     </a>
@@ -20,4 +18,5 @@ function Footer() {
         </footer>
     )
 }
+
 export default Footer

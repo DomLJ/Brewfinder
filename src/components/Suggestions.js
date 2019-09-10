@@ -1,28 +1,24 @@
-import React, { Component } from 'react'
-import AutocompleteTile from './AutocompleteTile'
+import React from 'react'
+import SuggestionTile from './SuggestionTile'
 
-class Suggestions extends Component {
-    // Todo - make it functional component
-    render() {
-        const autocompleteRender = this.props.autocompleteResult.map(item =>
-            <AutocompleteTile
-                name={item.name}
-                key={item.id}
-                breweryId={item.id}
-                pickBrewery={this.props.pickBrewery}
-            />
-        )
+function Suggestions(props) {
+    const autocompleteRender = props.autocompleteResult.map(item =>
+        <SuggestionTile
+            name={item.name}
+            key={item.id}
+            breweryId={item.id}
+            pickBrewery={props.pickBrewery}
+        />
+    )
+    const listVisibility = (props.isSuggestionsVisible) ? '' : 'suggestions--invisible'
 
-        const listVisibility = (this.props.isAutocompleteVisible) ? '' : '--invisible'
-
-        return (
-            <div className={`suggestions${listVisibility}`}>
-                <ul className={`suggestions__list`} >
-                    {autocompleteRender}
-                </ul>
-            </div>
-        )
-    }
+    return (
+        <div className={`suggestions ${listVisibility}`}>
+            <ul className={`suggestions__list`} >
+                {autocompleteRender}
+            </ul>
+        </div>
+    )
 }
 
 export default Suggestions
