@@ -1,6 +1,12 @@
 import React from 'react'
 
-function Input(props) {
+interface InputProps {
+    autocomplete: (value: string) => void,
+    isSuggestionsVisible: boolean,
+    inputValue: string
+}
+
+function Input(props: InputProps) {
     const inputActive = props.isSuggestionsVisible ? 'input--active' : ''
     return (
         <input

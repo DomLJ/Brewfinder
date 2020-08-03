@@ -1,7 +1,15 @@
 import React from 'react'
 import SuggestionTile from './SuggestionTile'
+import { Autocomplete } from './Main'
 
-function Suggestions(props) {
+interface SuggestionsProps {
+    isSuggestionsVisible: boolean,
+    pickBrewery: (id: string) => void,
+    autocompleteResult: Autocomplete[],
+    autocomplete: (value: string) => void
+}
+
+function Suggestions(props: SuggestionsProps) {
     const autocompleteRender = props.autocompleteResult.map(item =>
         <SuggestionTile
             name={item.name}

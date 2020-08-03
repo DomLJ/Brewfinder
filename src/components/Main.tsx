@@ -5,9 +5,33 @@ import BreweryData from './BreweryData'
 import Suggestions from './Suggestions'
 import Input from './Input'
 
-class Main extends Component {
-    constructor() {
-        super()
+export interface Autocomplete {
+    id: string,
+    name: string
+}
+
+export interface ChosenBrewery {
+    name: string,
+    latitude: string,
+    longitude: string,
+    street?: string,
+    city?: string,
+    state?: string,
+    website_url?: string
+}
+
+interface MainState {
+    autocompleteResult: Autocomplete[],
+    search: string,
+    key: number,
+    chosenBrewery: ChosenBrewery,
+    isSuggestionsVisible: boolean
+}
+
+class Main extends Component<{}, MainState> {
+    constructor(props: {}) {
+        super(props)
+
         this.state = {
             autocompleteResult: [],
             search: '',
@@ -23,14 +47,14 @@ class Main extends Component {
         this.pickBrewery = this.pickBrewery.bind(this)
     }
 
-    handleErrors(result) {
+    handleErrors(result: any) {
         if (!result.ok) {
             throw Error(result.statusText)
         }
         return result
     }
 
-    submitAutocomplete = value => {
+    submitAutocomplete(value: string) {
         if (value) {
             this.setState({
                 search: value,
@@ -43,8 +67,7 @@ class Main extends Component {
                         this.setState({
                             autocompleteResult: result
                         })
-                    }
-                    )
+                    })
                     .catch(console.log)
             }, 500))
         } else {
@@ -55,8 +78,8 @@ class Main extends Component {
         }
     }
 
-    pickBrewery(event) {
-        fetch(`https://api.openbrewerydb.org/breweries/${event.target.getAttribute('id')}`)
+    pickBrewery(id: string) {
+        fetch(`https://api.openbrewerydb.org/breweries/${id}`)
             .then(result => result.json())
             .then(
                 result => {
@@ -86,7 +109,6 @@ class Main extends Component {
                     autocompleteResult={this.state.autocompleteResult}
                     pickBrewery={this.pickBrewery}
                     isSuggestionsVisible={this.state.isSuggestionsVisible}
-                    id={this.state.key}
                 />
                 <BreweryData
                     chosenBrewery={this.state.chosenBrewery}
@@ -94,7 +116,6 @@ class Main extends Component {
                 />
                 <Map
                     chosenBrewery={this.state.chosenBrewery}
-                    key={this.state.key}
                 />
             </main>
         )

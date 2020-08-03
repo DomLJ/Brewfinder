@@ -1,6 +1,12 @@
 import React from 'react'
+import { ChosenBrewery } from './Main'
 
-function BreweryData(props) {
+interface BreweryDataProps {
+    chosenBrewery: ChosenBrewery,
+    id: number
+}
+
+function BreweryData(props: BreweryDataProps) {
     const brew = props.chosenBrewery
 
     return (
