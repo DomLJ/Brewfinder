@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/Brewfinder/static/css/main.b837bfe0.chunk.css",
-    "main.js": "/Brewfinder/static/js/main.f57adf76.chunk.js",
-    "main.js.map": "/Brewfinder/static/js/main.f57adf76.chunk.js.map",
-    "runtime~main.js": "/Brewfinder/static/js/runtime~main.d496d9ac.js",
-    "runtime~main.js.map": "/Brewfinder/static/js/runtime~main.d496d9ac.js.map",
-    "static/js/2.6c52ec6d.chunk.js": "/Brewfinder/static/js/2.6c52ec6d.chunk.js",
-    "static/js/2.6c52ec6d.chunk.js.map": "/Brewfinder/static/js/2.6c52ec6d.chunk.js.map",
+    "main.css": "/Brewfinder/static/css/main.a94c2585.chunk.css",
+    "main.js": "/Brewfinder/static/js/main.91f5bc31.chunk.js",
+    "main.js.map": "/Brewfinder/static/js/main.91f5bc31.chunk.js.map",
+    "runtime-main.js": "/Brewfinder/static/js/runtime-main.0c33ef76.js",
+    "runtime-main.js.map": "/Brewfinder/static/js/runtime-main.0c33ef76.js.map",
+    "static/js/2.bce4fe7b.chunk.js": "/Brewfinder/static/js/2.bce4fe7b.chunk.js",
+    "static/js/2.bce4fe7b.chunk.js.map": "/Brewfinder/static/js/2.bce4fe7b.chunk.js.map",
     "index.html": "/Brewfinder/index.html",
-    "precache-manifest.df914e8c38483961e7425b718e0121ce.js": "/Brewfinder/precache-manifest.df914e8c38483961e7425b718e0121ce.js",
+    "precache-manifest.3a0798d76161e4df326d18d2c755bb68.js": "/Brewfinder/precache-manifest.3a0798d76161e4df326d18d2c755bb68.js",
     "service-worker.js": "/Brewfinder/service-worker.js",
-    "static/css/main.b837bfe0.chunk.css.map": "/Brewfinder/static/css/main.b837bfe0.chunk.css.map"
-  }
+    "static/css/main.a94c2585.chunk.css.map": "/Brewfinder/static/css/main.a94c2585.chunk.css.map",
+    "static/js/2.bce4fe7b.chunk.js.LICENSE.txt": "/Brewfinder/static/js/2.bce4fe7b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0c33ef76.js",
+    "static/js/2.bce4fe7b.chunk.js",
+    "static/css/main.a94c2585.chunk.css",
+    "static/js/main.91f5bc31.chunk.js"
+  ]
 }
