@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { debounce } from 'lodash'
+import { debounce, throttle, Cancelable } from 'lodash'
 import Map from './Map'
 import BreweryData from './BreweryData'
 import Suggestions from './Suggestions'
@@ -29,6 +29,8 @@ interface MainState {
 }
 
 class Main extends Component<{}, MainState> {
+    debounceAutocomplete: (() => void) & Cancelable
+
     constructor(props: {}) {
         super(props)
 
@@ -45,6 +47,7 @@ class Main extends Component<{}, MainState> {
         }
         this.submitAutocomplete = this.submitAutocomplete.bind(this)
         this.pickBrewery = this.pickBrewery.bind(this)
+        this.debounceAutocomplete = debounce(this.requestAutocomplete, 1500)
     }
 
     handleErrors(result: any) {
@@ -59,41 +62,34 @@ class Main extends Component<{}, MainState> {
             this.setState({
                 search: value,
                 isSuggestionsVisible: true
-            }, debounce(() => {
-                fetch(`https://api.openbrewerydb.org/breweries/autocomplete?query=${this.state.search}`)
-                    .then(this.handleErrors)
-                    .then(result => result.json())
-                    .then(result => {
-                        this.setState({
-                            autocompleteResult: result
-                        })
-                    })
-                    .catch(console.log)
-            }, 500))
+            }, this.debounceAutocomplete)
         } else {
             this.setState({
-                search: value,
+                search: '',
                 isSuggestionsVisible: false
             })
         }
     }
 
+    requestAutocomplete() {
+        fetch(`https://api.openbrewerydb.org/breweries/autocomplete?query=${this.state.search}`)
+            .then(this.handleErrors)
+            .then(result => result.json())
+            .then(result => this.setState({ autocompleteResult: result }))
+            .catch(() => new Error())    
+    }
+
     pickBrewery(id: string) {
         fetch(`https://api.openbrewerydb.org/breweries/${id}`)
             .then(result => result.json())
-            .then(
-                result => {
-                    this.setState(prevState => {
-                        return {
-                            chosenBrewery: result,
-                            key: prevState.key + 1,
-                            search: result.name,
-                            isSuggestionsVisible: false,
-                            autocompleteResult: []
-                        }
-                    })
-                }
-            )
+            .then(result => this.setState(prevState => ({
+                chosenBrewery: result,
+                key: prevState.key + 1,
+                search: result.name,
+                isSuggestionsVisible: false,
+                autocompleteResult: []
+            })
+            ))
     }
 
     render() {
